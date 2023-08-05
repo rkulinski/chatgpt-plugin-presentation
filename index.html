@@ -94,6 +94,36 @@
         <section>
           <h2>Show time of <b>ZIP plugin</b></h2>
         </section>
+        <section>
+          <pre>
+            <code data-trim data-noescape>
+              curl --location 'http://localhost:3000/zip' \
+              --header 'Content-Type: application/json' \
+              --data '{
+                  "files": [
+                      {
+                          "filePath": "folder1/file1.js",
+                          "content": "console.log('\''Hello from file1.js!'\'');"
+                      },
+                      {
+                          "filePath": "folder1/folder2/file2.js",
+                          "content": "console.log('\''Hello from file2.js!'\'');"
+                      },
+                      {
+                          "filePath": "folder1/folder2/file3.js",
+                          "content": "console.log('\''Hello from file3.js!'\'');"
+                      }
+                  ]
+              }'
+            </code>
+            <br />
+            <code data-trim data-noescape>
+             {
+                  "url": "http://localhost:3000/download/file_1691225453387.zip"
+              }
+            </code>
+          </pre>
+        </section>
       </div>
     </div>
 
